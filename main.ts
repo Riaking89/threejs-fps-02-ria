@@ -30,7 +30,7 @@ if (existsSync(join(here, 'screenshots'))) {
 // bytes; the others refuse an entry the scorer would refuse (more than 4
 // screenshots or one over 256 KiB; more than 993 files in game/ or 48 MiB of
 // game files, in all: game/ counts beside /output's own 1000-entry cap, its
-// screenshots/ and dossier.json). Ember Yard's source is ~95 KiB of text, so
+// screenshots/ and dossier.json). Ember Yard's own source is ~86 KiB of text, so
 // the judge reads every module whole; the vendored three.js files are never
 // counted as text.
 writeFileSync(
