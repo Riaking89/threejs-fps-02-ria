@@ -217,6 +217,7 @@ function endRound(winner, reason) {
     if (f.team === winner && match.bomb.state === 'planted' && winner === 'ember') f.money += ECON.plantBonus;
   }
   const youWon = winner === 'ember';
+  hud.closeBuy(); // the round-end banner must not sit behind the buy menu
   hud.banner(youWon ? 'EMBER WINS' : 'ASH WINS', `${reason} · ${match.score.ember} — ${match.score.ash}`, 3800);
   if (youWon) audio.roundWin(); else audio.roundLose();
 }
